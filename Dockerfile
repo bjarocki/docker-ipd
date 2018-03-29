@@ -1,4 +1,4 @@
-FROM golang
+FROM golang:alpine
 
 ENV INDEX_URL https://raw.githubusercontent.com/martinp/ipd/master/index.html
 ENV GEOIP_COUNTRY_URL http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
