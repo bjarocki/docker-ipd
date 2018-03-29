@@ -4,7 +4,8 @@ ENV INDEX_URL https://raw.githubusercontent.com/martinp/ipd/master/index.html
 ENV GEOIP_COUNTRY_URL http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
 ENV GEOIP_CITY_URL http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz
 
-RUN go get github.com/martinp/ipd
+RUN git clone git://github.com/mpolden/ipd.git $GOPATH/src/github.com/mpolden/ipd
+RUN go get github.com/mpolden/ipd
 RUN \
   cd /tmp && \
   curl -SsLO $GEOIP_COUNTRY_URL && \
